@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@100;500;700&family=Raleway&family=Roboto&display=swap');
+
+/*font-family: 'Roboto', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Permanent Marker', cursive;*/
+
+
+/* primary color #0091ff*/
+/* secondary color #FF6E00*/
+
+html{
+	background: #081113;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  position: relative;
+  background: #081113;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+}
+
+.overlay{
+	background-image:url("../bgimg/overlay.png");
+	background-repeat: repeat;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1; 
+	opacity: 0.3;
+}
+
+#myCarousel{
+	transition: ease-in-out 0.3s;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow-y: auto;
+    opacity: 0.5;
+}
+
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
+.carousel-item img{
+	height: 100vh;
+	width: 100vh;
+	object-fit: cover;
+	object-position: right;
+}
+
+#header * {
+    transition: ease-in-out 0.3s;
+}
+
+#header {
+    transition: ease-in-out 0.3s;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 997;
+    overflow-y: auto;
+    top: 0;
+    left: 7rem;
+}
+
+#header h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+#header h3{
+    font-family: 'Raleway', sans-serif;
+}
+
+#header p{
+    margin-top: 2rem;
+}
+
+.ico{
+    font-size: 20px;
+}
+
+
+@media only screen and (max-width: 700px) {
+    #header {
+        text-align: center;
+        align-items: center;
+        left: 0rem;
+        padding: 0rem 1rem;
+    }
+    #header h1{
+        font-size: 3rem;
+    }
+    #header h3{
+        font-size: 20px;
+    }
+}
